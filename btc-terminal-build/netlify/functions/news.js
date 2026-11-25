@@ -10,7 +10,7 @@ const FEEDS = [
 function xmlItems(xml, source) {
   const chunks = xml.match(/<(item|entry)[\s\S]*?<\/(item|entry)>/gi) || [];
   return chunks.slice(0, 15).map(x => {
-    const get = (tag) => (x.match(new RegExp(`<${tag}[^>]*>([\\\\s\\\\S]*?)<\\\\/${tag}>`, "i")) || [,""])[1]
+    const get = (tag) => (x.match(new RegExp("<" + tag + "[^>]*>([\\s\\S]*?)</" + tag + ">", "i")) || [,""])[1]
       .replace(/<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]+>/g, "").trim();
     const link = get("link") || ((x.match(/<link[^>]+href="([^"]+)"/i)||[])[1] || "");
     return { title: get("title"), summary: get("description") || get("summary"), link, date: get("pubDate") || get("updated") || get("published"), source };
