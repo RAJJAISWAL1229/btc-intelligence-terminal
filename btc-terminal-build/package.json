@@ -1,0 +1,12 @@
+{
+  "name": "btc-intelligence-terminal-free-cloud-ai",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "netlify dev --host 0.0.0.0",
+    "build": "echo Static site ready"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.0.0"
+  }
+}
