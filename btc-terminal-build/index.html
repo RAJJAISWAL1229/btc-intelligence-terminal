@@ -7,8 +7,6 @@
 </style></head><body>
 <header><div><div class="brand">BTC <span>INTELLIGENCE</span></div><div class="sub">GLOBAL MARKET & EVENT TERMINAL</div></div><div class="controls"><span class="status" id="systemStatus">● CHECKING CONNECTION</span><span class="pill" id="clock">--:--:-- IST</span></div></header>
 <main>
-<div class="banner" style="margin:12px 0">Cloud AI mode: news analysis runs on Google Gemini on Google's servers. Your PC does not run the AI model. Add <b>GEMINI_API_KEY</b> in Netlify environment variables and deploy the site to enable analysis.</div>
-<div class="banner" id="setupNotice" style="margin-bottom:14px;border-color:#8a6330;color:#f4d69a">Setup required: deploy this project to Netlify and add GEMINI_API_KEY in Site configuration → Environment variables. The AI runs in the cloud; your PC can be off. The BTC quote and news feeds use public sources and may be rate-limited.</div>
 <div class="topline"><div><h1>Market intelligence overview</h1><div class="small" style="margin-top:5px">Global factors that may influence Bitcoin · All timestamps in Asia/Kolkata</div></div><div class="controls"><button class="btn" onclick="refreshAll()">↻ Refresh data</button><span class="pill" id="updated">Waiting for data</span></div></div>
 <div class="grid stats">
 <div class="panel"><div class="statlabel">BTC / USD</div><div class="statvalue" id="price">—</div><div class="small" id="change">Live market quote</div></div>
